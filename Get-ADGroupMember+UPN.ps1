@@ -1,0 +1,1 @@
+Get-ADGroupMember -Identity "HQ-O365-OfficeNetwork-AccessOnly" | foreach-object { get-aduser $_.SamAccountName | Select-Object userPrincipalName }
