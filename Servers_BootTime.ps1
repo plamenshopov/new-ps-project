@@ -1,4 +1,4 @@
-#$servers = Get-ADDomainController -filter * | Select-Object -ExpandProperty name | Sort-Object
+$servers = Get-ADDomainController -filter * | Select-Object -ExpandProperty name | Sort-Object
 
 foreach ($server in $servers){
     try {
