@@ -1,4 +1,4 @@
-$OS = Get-CimInstance -classname Win32_OperatingSystem -ComputerName DEATHMATCH
+#$OS = Get-CimInstance -classname Win32_OperatingSystem -ComputerName DEATHMATCH
 $RAM = ($os.TotalVisibleMemorySize - $os.FreePhysicalMemory)*1KB
 
 $RemotePC = @{
