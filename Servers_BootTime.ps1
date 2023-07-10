@@ -5,7 +5,7 @@ foreach ($server in $servers){
         $time = ((get-WMIObject -ComputerName $server -Namespace root\CIMv2 -Class win32_operatingsystem -ErrorAction SilentlyContinue | Select-Object -ExpandProperty lastbootuptime) -split "\.")[0]
     }
     catch {
-        Write-Output "$server  Error in connecting" `n | Out-File C:\Users\plamen\Desktop\BootTime.txt -Append
+        Write-Output "$server Error in connecting" `n | Out-File C:\Users\plamen\Desktop\BootTime.txt -Append
         continue
     }
 
